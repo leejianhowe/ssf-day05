@@ -1,0 +1,20 @@
+{{#if loadResult}}
+    {{#each loadResult}}
+        <div class="row justify-content-md-center">
+            <div class="col">
+                <h2 class="titleHeader">{{this.title}}</h2>
+
+                <img class="sizeImage" src="{{this.image}}">
+                <p>{{this.summary}}</p>
+                <div class="container d-flex justify-content-between">
+                    <p>{{this.date}}</p>
+                    <a target="_blank" href="{{this.url}}">Read</a>
+                </div>
+
+            </div>
+        </div>
+    {{/each}}
+{{else}}
+    <h2 class="mt-3">No Related Articles</h2>
+    <a href="/">Back</a>
+{{/if}}
